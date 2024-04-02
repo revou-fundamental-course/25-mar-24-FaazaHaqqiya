@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container{
+    display: flex;
+    font-family: calibri;
+    background-color: whitesmoke;
+}
+
+/* Bagian form */
+.container-form{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: auto;
+    padding-left: 10px;
+}
+.form-input{
+    width: 95%;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color:#E6E6FA ;
+}
+.form-input>input[type=number]{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.form-input>button{
+    border: none;
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: red;
+    margin-bottom: 10px;
+    background-color:  #6698FF;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+}
+
+
+/* hasil */
+.result{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: auto;
+    padding-left: 10px;
+}
+
+/* elemen ketengah */
+.result-item{
+    text-align: center;
+    background-color: #E6E6FA;
+    
+}
+.underweight-disease, .ideal, .overweight-disease, .obesity-disease {
+    text-align: center;
+    background-color: #E6E6FA;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.result-button {
+    margin: 0 auto;
+    width: 35%;
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: none;
+    display: none;  /* Sembunyikan secara default */
+    margin-bottom: 5px;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* css underweight */
+.underweight-information button  {
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.underweight-disease button{
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.underweight-information {
+    display: none; /* Sembunyikan secara default */
+}
+.underweight-information.show {
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+.underweight-disease {
+    display: none; /* Sembunyikan secara default */
+}
+.underweight-disease.show{
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+
+
+/* css normal (ideal) */
+.ideal-information button  {
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.ideal button{
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.ideal-information {
+    display: none; /* Sembunyikan secara default */
+}
+.ideal-information.show {
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+.ideal {
+    display: none; /* Sembunyikan secara default */
+}
+.ideal.show{
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+
+
+/* css overweight */
+.overweight-information button  {
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.overweight-disease button{
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.overweight-information {
+    display: none; /* Sembunyikan secara default */
+}
+.overweight-information.show {
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+.overweight-disease {
+    display: none; /* Sembunyikan secara default */
+}
+.overweight-disease.show{
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+
+/* css obesity */
+.obesity-information button  {
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.obesity-disease button{
+    width: 35%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #6698FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+.obesity-information {
+    display: none; /* Sembunyikan secara default */
+}
+.obesity-information.show {
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+.obesity-disease {
+    display: none; /* Sembunyikan secara default */
+}
+.obesity-disease.show{
+    display: block; /* Tampilkan jika kelas 'show' ditambahkan */
+}
+
+/* validasi form input */
+#weight-error , #age-error, #height-error{
+    color: red;
+    font-weight: bold;
+}
+
+/* bagian footer */
+footer {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto;
+    font-family: "Lobster Two", sans-serif;
+    padding-top: -10px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>kalkulator BMI</title>
+</head>
+<body>
+<div class="container">
+
+<!-- ini bagian isi kalkulator BMI -->
+    <div class="container-form">
+<!-- HEADER -->
+    <header>
+    <h1>Kalkulator BMI</h1>
+    </header>
+
+<!-- CONTENT/ISI -->
+    <main>
+    <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganu Yuk, hitung sekarang di kalkulator BMI.</p>
+    
+    <!-- ini bagian form input kalkulator BMI -->
+    <div class="form-input" id="form">
+        <label><b>Jenis Kelamin</b></label><br>
+        <input type="radio" name="gender" id="man"><label for="man" >Pria</label>
+        <input type="radio" name="gender" id="woman"><label for="woman">Wanita</label>
+        <br>
+        <br>
+
+        <label for="weight"><b>Berat Badan (Kg)</b></label><br>
+        <input type="number" placeholder="Masukkan berat badan anda" name="weight" id="weight" onkeyup="validateWeight()">
+        <div id="weight-error"></div>
+        <br>
+        <br>    
+
+        <label for="age"><b>Usia (Tahun)</b></label><br>
+        <input type="number" placeholder="Masukkan usia anda" name="age" id="age" onkeyup="validateAge()">
+        <div id="age-error"></div>
+        <br>
+        <br>
+
+        <label for="height"><b>Tinggi Badan (Cm)</b></label><br>
+        <input type="number" placeholder="Masukkan tinggi badan anda" name="height" id="height" onkeyup="validateHeight()">
+        <div id="height-error"></div>
+        <br>
+        <br>
+
+        <button type="submit">Hitung BMI</button>
+        <button type="reset">Reset</button>
+    </div>
+
+    <!-- informasi mengenai kalkulator BMI -->
+    <h2>Keunggulan fitur</h2>
+    <ol type="1">
+        <li>Menghitung berat badan</li>
+        <li> Menentukan kategori berat badan ideal atau tidak</li>
+        <li>Mempersiapkan program penurunan berat badan</li>
+    </ol>
+    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+    <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter). atau BMI = Kg/M²</p>
+</div>
+
+<!-- ini bagian hasil  -->
+<div class="result">
+    <h1>Hasil </h1>
+    <div class="result-item">
+    <h3></h3>
+    <div id="result"><b></b></div>
+    <p></p>
+    <button class="result-button">Download Hasil BMI</button>
+    </div>
+
+    <!-- bagian kekurangan berat badan -->
+    <div class="underweight-information">
+        <b>Hasil BMI kurang dari 18.5</b>
+        <p>Cara menambah berat badan yaitu dengan meningkatkan asupan protein. Nutrisi dari sumber hewani sangat penting untuk meningkatkan pertumbuhan, perkembangan, dan kesehatan tubuh yang optimal.
+            Jika BMI anda berada dalam kategori ini maka anda dianjurkan untuk meningkatkan berat badan hingga batas normal. 
+            </p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <div class="underweight-disease">
+        <h3>Beberapa penyakit yang berasal dari berat badan rendah </h3>
+        <p>Infertilitas</p>
+        <p>Anemia </p>
+        <p>Osteoporosis</p>
+        <p>Sistem Imun Lemah</p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <!-- bagian berat badan ideal -->
+    <div class="ideal-information">
+        <b>Hasil BMI antara 18.5 dan 25 </b>
+        <p>Pastikan asupan kalori sesuai dengan kebutuhan kalori harian dan konsumsi makanan sehat seperti buah dan sayur. Diet yang baik dapat mempertahankan kesehatan dan imun anda. 
+            </p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <div class="ideal">
+        <h3>Beberapa manfaat berat badan normal (ideal) </h3>
+        <p>Tubuh lebih bugar dan aktif</p>
+        <p>Tidak mudah terserang penyakit </p>
+        <p>Sirkulasi darah menjadi lebih sehat</p>
+        <h4>Pertahankan berat badan anda</h4>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <!--  bagian berat badan lebih -->
+    <div class="overweight-information">
+        <b>Hasil BMI antara 25 dan 29</b>
+        <p>Anda dalam kategori overweight atau berat badan berlebih. 
+            Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga. 
+            Jika BMI anda berada dalam kategori ini maka anda dianjurkan untuk menurunkan berat badan hingga batas normal. 
+            </p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <div class="overweight-disease">
+        <h3>Beberapa penyakit yang berasal dari kelebihan berat badan </h3>
+        <p>Diabetes</p>
+        <p>Hipertensi </p>
+        <p>Sakit Jantung</p>
+        <p>Osteoartritis</p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <!--  bagian berat obesitas -->
+    <div class="obesity-information">
+        <b>Hasil BMI lebih dari 30</b>
+        <p>Anda dalam kategori obesity (kegemukan)
+            Obesitas adalah gangguan yang melibatkan lemak tubuh berlebihan yang meningkatkan risiko masalah kesehatan.
+            Obesitas terjadi karena kalori yang masuk lebih banyak daripada yang dibakar melalui olahraga dan kegiatan normal sehari-hari.
+            Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga. 
+            Jika BMI anda berada dalam kategori ini maka anda dianjurkan untuk menurunkan berat badan hingga batas normal. 
+            </p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+    <div class="obesity-disease">
+        <h3>Beberapa penyakit yang berasal dari kelebihan berat badan </h3>
+        <p>Diabetes</p>
+        <p>Hipertensi </p>
+        <p>Sakit Jantung</p>
+        <p>Osteoartritis</p>
+        <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+        <button>Registrasi Online Ahli Gizi</button>
+    </div>
+
+</div>
+
+</main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h3>Faaza Haqqiya</h3>
+    <p>Software Engineering, 2024</p>
+</footer>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
